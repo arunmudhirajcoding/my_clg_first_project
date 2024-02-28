@@ -5,6 +5,10 @@ import wikipedia #pip install wikipedia
 import webbrowser
 import os
 import sys
+import pyaudio
+import numpy as np
+import noisereduce as nr 
+import sounddevice as sd
 
 # import smtplib
 
@@ -117,3 +121,4 @@ if __name__ == "__main__":
         #     except Exception as e:
         #         print(e)
         #         speak("Sorry my friend harry bhai. I am not able to send this email")    
+lapi_the_AI
