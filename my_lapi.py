@@ -83,13 +83,16 @@ if __name__ == "__main__":
         if 'wikipedia' in query:
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
-            results = wikipedia.summary(query, sentences=2)
+            results = wikipedia.summary(query, sentences=1)
             speak("According to Wikipedia")
             print(results)
             speak(results)
 
         elif 'open youtube' in query:
-            webbrowser.open("youtube.com")
+            speak('Searching in youtube ...')
+            query = query.replace("youtube search", "")
+            web = "https://www.youtube.com/results?search_query=" + query
+            webbrowser.open("web")
 
         elif 'open google' in query:
             webbrowser.open("google.com")
@@ -112,6 +115,6 @@ if __name__ == "__main__":
             os.startfile(codePath)
 
         elif "go to sleep" in query:
-            speak("going to sleep, run again to wake me anytime u need")
+            speak("going to sleep, run again to wake me anytime u need, Thank u")
             print("sleeping😴😴😴zzzzz.....")
             shutDown()
